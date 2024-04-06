@@ -6,6 +6,7 @@
   <body>
     <p>romeo deetri jenver</p>
     <button onclick="
+
       const randomNumber = Math.random();
 
       let computerMove = '';
@@ -28,7 +29,16 @@
         result = 'pwede na, nanalo ka.';
       }
 
-      alert(`You picked romeo. Computer picked ${computerMove}. ${result}`);
+      if (result === 'pwede na, nanalo ka.) {
+          score.wins += 1;
+      } else if (result === 'bobo mo naman bat ka natalo?') {
+          score.losses += 1;
+      } else if (result === 'gaya gaya ampota.) {
+          score.ties += 1;
+      }
+
+      alert(`You picked romeo. Computer picked ${computerMove}. ${result}
+                Wins: ${score.wins) Losses: ${score.losses} Ties: ${score.ties}`;
     ">romeo</button>
 
     <button onclick="
@@ -54,7 +64,16 @@
         result = 'bobo mo naman bat ka natalo?';
       }
 
-      alert(`You picked deetri. Computer picked ${computerMove}. ${result}`);
+      if (result === 'pwede na, nanalo ka.) {
+          score.wins += 1;
+      } else if (result === 'bobo mo naman bat ka natalo?') {
+          score.losses += 1;
+      } else if (result === 'gaya gaya ampota.) {
+          score.ties += 1;
+      }
+
+      alert(`You picked deetri. Computer picked ${computerMove}. ${result}
+                Wins: ${score.wins) Losses: ${score.losses} Ties: ${score.ties}`;
     ">deetri</button>
 
     <button onclick="
@@ -79,11 +98,32 @@
       } else if (computerMove === 'jenver') {
         result = 'gaya gaya ampota.';
       }
+       
+      if (result === 'pwede na, nanalo ka.) {
+          score.wins += 1;
+      } else if (result === 'bobo mo naman bat ka natalo?') {
+          score.losses += 1;
+      } else if (result === 'gaya gaya ampota.) {
+          score.ties += 1;
+      }
 
-      alert(`You picked jenver. Computer picked ${computerMove}. ${result}`);
+      alert(`You picked jenver. Computer picked ${computerMove}. ${result}
+                Wins: ${score.wins) Losses: ${score.losses} Ties: ${score.ties}`;
     ">jenver</button>
 
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      ">Reset</button>
+
     <script>
+            const score = {
+        wins: 0,
+        losses: 0, 
+        ties: 0
+      };
+
       
     </script>
   </body>
