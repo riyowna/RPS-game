@@ -11,7 +11,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   
     let result = '';
   
-    if (playerMove === 'jenver') {
+    if (playerMove === 'angello') {
       if (computerMove === 'romeo') {
         result = 'You lose.';
       } else if (computerMove === 'deetri') {
@@ -20,7 +20,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
         result = 'Tie.';
       }
   
-    } else if (playerMove === 'deetri') {
+    } else if (playerMove === 'riven') {
       if (computerMove === 'romeo') {
         result = 'You win.';
       } else if (computerMove === 'deetri') {
@@ -41,14 +41,14 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   
     if (result === 'You win.') {
       score.wins += 1;
-      alert(`You picked ${playerMove}, the computer picked ${computerMove}. Wow nanalo ka, gudjob
+      alert(`You picked ${playerMove}, the computer picked ${computerMove}. Wow nanalo ka, angas mo na niyan?
       Wins: ${score.wins} Losses: ${score.losses} Ties:${score.ties}`)
     } else if (result === 'You lose.') {
       score.losses += 1;
       alert( `You picked ${playerMove}, the computer picked ${computerMove}, bobo mo naman boi. Wins: ${score.wins} Losses: ${score.losses} Ties:${score.ties}`)
     } else if (result === 'Tie.') {
       score.ties += 1;
-      alert(`You picked ${playerMove}, the computer picked ${computerMove}, gaya gaya much? 
+      alert(`You picked ${playerMove}, the computer picked ${computerMove}, gaya gaya ampota?? 
       Wins: ${score.wins} Losses: ${score.losses} Ties:${score.ties}`)
     }
   
@@ -70,9 +70,9 @@ let score = JSON.parse(localStorage.getItem('score')) || {
     if (randomNumber >= 0 && randomNumber < 1 / 3) {
       computerMove = 'romeo';
     } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-      computerMove = 'deetri';
+      computerMove = 'riven';
     } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-      computerMove = 'jenver';
+      computerMove = 'angello';
     }
   
     return computerMove;
