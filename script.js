@@ -14,27 +14,27 @@ let score = JSON.parse(localStorage.getItem('score')) || {
     if (playerMove === 'angello') {
       if (computerMove === 'romeo') {
         result = 'You lose.';
-      } else if (computerMove === 'deetri') {
+      } else if (computerMove === 'riven') {
         result = 'You win.';
-      } else if (computerMove === 'jenver') {
+      } else if (computerMove === 'angello') {
         result = 'Tie.';
       }
   
     } else if (playerMove === 'riven') {
       if (computerMove === 'romeo') {
         result = 'You win.';
-      } else if (computerMove === 'deetri') {
+      } else if (computerMove === 'riven') {
         result = 'Tie.';
-      } else if (computerMove === 'jenver') {
+      } else if (computerMove === 'angello') {
         result = 'You lose.';
       }
       
     } else if (playerMove === 'romeo') {
       if (computerMove === 'romeo') {
         result = 'Tie.';
-      } else if (computerMove === 'deetri') {
+      } else if (computerMove === 'riven') {
         result = 'You lose.';
-      } else if (computerMove === 'jenver') {
+      } else if (computerMove === 'angello') {
         result = 'You win.';
       }
     }
